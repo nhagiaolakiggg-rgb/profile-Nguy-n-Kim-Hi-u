@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trần Minh Tuấn - Ba Đôi Mắt & Hành Trình Vươn Ra Thế Giới</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #38bdf8;
+            --gold: #fbbf24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #020617;
+            color: #f8fafc;
+            scroll-behavior: smooth;
+        }
+        .serif { font-family: 'Playfair Display', serif; }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #38bdf8, #818cf8, #fbbf24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-fade {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .section-fade.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .timeline-dot::before {
+            content: '';
+            position: absolute;
+            left: -9px;
+            top: 10px;
+            width: 18px;
+            height: 18px;
+            background: var(--accent);
+            border-radius: 50%;
+            box-shadow: 0 0 15px var(--accent);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 px-6 py-4 flex justify-between items-center glass m-4 top-0 left-0 right-0 max-w-6xl mx-auto border-none">
+        <div class="text-xl font-bold gradient-text">TuanTran.CS</div>
+        <div class="hidden md:flex space-x-8 font-medium">
+            <a href="#about" class="hover:text-sky-400 transition">Giới Thiệu</a>
+            <a href="#projects" class="hover:text-sky-400 transition">Dự Án</a>
+            <a href="#summary" class="hover:text-sky-400 transition">Tổng Kết</a>
+        </div>
+        <button class="bg-sky-500 hover:bg-sky-600 px-5 py-2 rounded-full text-sm font-semibold transition">Liên hệ</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex flex-col justify-center items-center pt-32 pb-20 px-6 text-center">
+        <div class="floating mb-8">
+            <div class="w-32 h-32 md:w-48 md:h-48 rounded-full border-4 border-sky-500/30 p-2">
+                <div class="w-full h-full rounded-full bg-slate-800 flex items-center justify-center overflow-hidden">
+                    <i class="fa-solid fa-user-graduate text-6xl text-sky-400"></i>
+                </div>
+            </div>
+        </div>
+        <h2 class="text-sky-400 font-semibold tracking-widest uppercase mb-4">Nam sinh Chuyên Tin - Top 7 Mỹ</h2>
+        <h1 class="serif text-5xl md:text-7xl mb-6 leading-tight">Nguyễn Kim Hiếu</h1>
+        <p class="max-w-2xl text-slate-400 text-lg md:text-xl leading-relaxed">
+            "Sử dụng công nghệ để mở ra những đôi mắt mới cho thế giới." - Tác giả bài luận <span class="text-amber-400 font-semibold">"Ba Đôi Mắt"</span> gây ấn tượng với hội đồng tuyển sinh Chicago.
+        </p>
+        <div class="mt-10 flex gap-4">
+            <a href="#about" class="bg-white text-slate-900 px-8 py-3 rounded-full font-bold hover:scale-105 transition">Khám phá câu chuyện</a>
+            <a href="#projects" class="border border-slate-700 px-8 py-3 rounded-full font-bold hover:bg-slate-800 transition">Xem dự án</a>
+        </div>
+    </section>
+
+    <!-- Mục 1: Giới thiệu & Định hướng -->
+    <section id="about" class="max-w-6xl mx-auto py-24 px-6 section-fade">
+        <div class="grid md:grid-cols-2 gap-16 items-start">
+            <div>
+                <h3 class="serif text-4xl mb-8 border-l-4 border-sky-500 pl-6">Câu chuyện "Ba Đôi Mắt"</h3>
+                <div class="space-y-6 text-slate-300 leading-relaxed text-lg">
+                    <p>
+                        Trong bài luận gửi đến các trường Đại học hàng đầu Mỹ, Tuấn không kể về bảng thành tích học thuật chói lọi, mà kể về hành trình thấu cảm qua 3 góc nhìn:
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex gap-4">
+                            <span class="text-sky-400 font-bold">01.</span>
+                            <span><strong class="text-white">Đôi mắt vật lý:</strong> Khả năng quan sát thế giới thông qua dữ liệu và logic của một học sinh chuyên Tin.</span>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="text-sky-400 font-bold">02.</span>
+                            <span><strong class="text-white">Đôi mắt tâm hồn:</strong> Sự thấu cảm với những mảnh đời khó khăn mà em gặp trong các chuyến đi thiện nguyện.</span>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="text-sky-400 font-bold">03.</span>
+                            <span><strong class="text-white">Đôi mắt công nghệ:</strong> Tầm nhìn sử dụng AI và thuật toán để giải quyết các vấn đề xã hội.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="glass p-8 space-y-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-bullseye text-amber-400"></i> Mục tiêu & Định hướng
+                    </h4>
+                    <p class="text-slate-400">Tuấn định hướng theo đuổi ngành Computer Science kết hợp Social Impact. Mục tiêu là xây dựng các nền tảng công nghệ hỗ trợ giáo dục vùng sâu vùng xa.</p>
+                </div>
+                <hr class="border-slate-800">
+                <div>
+                    <h4 class="text-xl font-bold mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-heart text-rose-500"></i> Dự án thiện nguyện tiêu biểu
+                    </h4>
+                    <div class="space-y-4">
+                        <div class="bg-slate-900/50 p-4 rounded-xl border border-slate-800">
+                            <span class="text-xs font-bold text-sky-400 uppercase">CodeForKids</span>
+                            <p class="text-sm mt-1">Dạy lập trình cơ bản miễn phí cho hơn 200 trẻ em tại các mái ấm tình thương.</p>
+                        </div>
+                        <div class="bg-slate-900/50 p-4 rounded-xl border border-slate-800">
+                            <span class="text-xs font-bold text-sky-400 uppercase">Ánh Sáng Vùng Cao</span>
+                            <p class="text-sm mt-1">Gây quỹ xây dựng thư viện số cho học sinh tiểu học tại Hà Giang.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mục 2: Dự án & Quy trình -->
+    <section id="projects" class="bg-slate-900/30 py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 section-fade">
+                <h2 class="serif text-5xl mb-4">Hành Trình Kiến Tạo</h2>
+                <p class="text-slate-400">Từ những dòng code đầu tiên đến các dự án có sức ảnh hưởng</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <!-- Achievement Card -->
+                <div class="glass p-8 text-center section-fade" style="transition-delay: 100ms;">
+                    <i class="fa-solid fa-trophy text-4xl text-amber-400 mb-4"></i>
+                    <h4 class="text-4xl font-bold mb-2">Top 7</h4>
+                    <p class="text-slate-400">Đại học Hoa Kỳ (UChicago)</p>
+                </div>
+                <div class="glass p-8 text-center section-fade" style="transition-delay: 200ms;">
+                    <i class="fa-solid fa-code-branch text-4xl text-sky-400 mb-4"></i>
+                    <h4 class="text-4xl font-bold mb-2">15+</h4>
+                    <p class="text-slate-400">Dự án Tech-for-Good</p>
+                </div>
+                <div class="glass p-8 text-center section-fade" style="transition-delay: 300ms;">
+                    <i class="fa-solid fa-medal text-4xl text-emerald-400 mb-4"></i>
+                    <h4 class="text-4xl font-bold mb-2">Quốc Gia</h4>
+                    <p class="text-slate-400">Giải Nhất Tin Học Trẻ</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center section-fade">
+                <div class="space-y-8">
+                    <h3 class="serif text-3xl italic">"Quy trình là chìa khóa để biến ý tưởng thành giá trị."</h3>
+                    <div class="relative border-l border-slate-700 ml-3 space-y-12">
+                        <div class="relative pl-8 timeline-dot">
+                            <h5 class="font-bold text-xl mb-1">Thấu cảm & Quan sát (Empathize)</h5>
+                            <p class="text-slate-400">Tìm kiếm những vấn đề thực tế mà xã hội đang gặp phải thông qua trải nghiệm thực địa.</p>
+                        </div>
+                        <div class="relative pl-8 timeline-dot">
+                            <h5 class="font-bold text-xl mb-1">Xây dựng giải pháp (Build)</h5>
+                            <p class="text-slate-400">Ứng dụng thế mạnh chuyên Tin để lập trình các sản phẩm MVP (Minimum Viable Product).</p>
+                        </div>
+                        <div class="relative pl-8 timeline-dot">
+                            <h5 class="font-bold text-xl mb-1">Thử nghiệm & Tối ưu (Scale)</h5>
+                            <p class="text-slate-400">Lắng nghe phản hồi từ người dùng và mở rộng quy mô dự án ra cộng đồng.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass p-10 space-y-6">
+                    <h4 class="text-2xl font-bold text-sky-400">Thách thức & Trải nghiệm</h4>
+                    <p class="text-slate-300 italic">"Khó khăn lớn nhất không phải là viết code, mà là làm sao để công nghệ chạm được đến trái tim những người không biết dùng smartphone."</p>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <i class="fa-solid fa-triangle-exclamation text-amber-500 mt-1"></i>
+                            <p class="text-sm text-slate-400">Đối mặt với rào cản ngôn ngữ và sự thiếu thốn cơ sở vật chất khi triển khai dự án tại vùng cao.</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i class="fa-solid fa-clock text-sky-400 mt-1"></i>
+                            <p class="text-sm text-slate-400">Cân bằng giữa việc ôn luyện đội tuyển quốc gia và duy trì hoạt động ngoại khóa bền bỉ.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mục 3: Tổng kết & Bài học -->
+    <section id="summary" class="max-w-4xl mx-auto py-32 px-6 text-center">
+        <div class="section-fade">
+            <i class="fa-solid fa-quote-left text-6xl text-sky-500/20 mb-8"></i>
+            <h2 class="serif text-4xl md:text-5xl mb-12">Những Bài Học Tâm Đắc</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 text-left mb-16">
+                <div class="bg-gradient-to-br from-sky-900/20 to-transparent p-8 rounded-3xl border border-sky-500/20">
+                    <h5 class="font-bold mb-4 text-sky-400 text-xl">Linh hoạt là sức mạnh</h5>
+                    <p class="text-slate-400">Đừng bao giờ bám cứng vào một kế hoạch. Thế giới thay đổi, dòng code có thể lỗi, nhưng mục đích cuối cùng phải luôn vững vàng.</p>
+                </div>
+                <div class="bg-gradient-to-br from-amber-900/20 to-transparent p-8 rounded-3xl border border-amber-500/20">
+                    <h5 class="font-bold mb-4 text-amber-400 text-xl">Kết nối con người</h5>
+                    <p class="text-slate-400">Dù bạn có giỏi thuật toán đến đâu, nếu không thể làm việc nhóm và thấu cảm với người dùng, sản phẩm của bạn sẽ vô hồn.</p>
+                </div>
+            </div>
+
+            <div class="glass p-12 relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-4 opacity-10">
+                    <i class="fa-solid fa-paper-plane text-8xl"></i>
+                </div>
+                <h4 class="serif text-3xl mb-6 italic">Lời nhắn nhủ từ Tuấn</h4>
+                <p class="text-xl text-slate-300 leading-relaxed mb-8">
+                    "Điểm số hay trường Top không phải là đích đến cuối cùng. Chúng chỉ là những tấm vé đưa bạn đến một sân khấu lớn hơn để cống hiến. Hãy tìm cho mình một 'đôi mắt thứ ba' - đôi mắt để nhìn thấy những điều ý nghĩa phía sau những con số."
+                </p>
+                <div class="flex justify-center gap-6">
+                    <a href="#" class="text-2xl hover:text-sky-400 transition"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" class="text-2xl hover:text-sky-400 transition"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="text-2xl hover:text-sky-400 transition"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-slate-500 border-t border-slate-900">
+        <p>&copy; 2024 Portfolio Trần Minh Tuấn. Build with <i class="fa-solid fa-heart text-rose-500"></i> and Passion.</p>
+    </footer>
+
+    <script>
+        // Smooth reveal on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section-fade').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Simple smooth scroll for navigation
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
